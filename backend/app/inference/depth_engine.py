@@ -112,13 +112,23 @@ class DepthEngine:
         # 1. Attempt Depth Anything V2 inference if pipeline is available
         if self.is_ai_loaded and hasattr(self, 'pipe') and self.pipe is not None:
             try:
-                proc_img = pil_image
-                if max(orig_w, orig_h) > 1024:
-                    proc_img = pil_image.resize((1024, 1024), Image.Resampling.BILINEAR)
+                import torch
+                import gc
+                torch.set_num_threads(1)
                 
-                pipe_out = self.pipe(proc_img)
+                # Resize to 512x512 for inference to strictly keep memory under 350MB
+                proc_img = pil_image
+                if max(orig_w, orig_h) > 512:
+                    proc_img = pil_image.resize((512, 512), Image.Resampling.BILINEAR)
+                
+                with torch.inference_mode():
+                    pipe_out = self.pipe(proc_img)
+                
                 depth_map_pil = pipe_out["depth"]
                 depth_arr = np.array(depth_map_pil).astype(np.float32)
+                
+                # Free torch memory immediately
+                gc.collect()
                 
                 if depth_arr.shape[:2] != (orig_h, orig_w):
                     depth_arr = cv2.resize(depth_arr, (orig_w, orig_h), interpolation=cv2.INTER_LINEAR)
@@ -130,6 +140,8 @@ class DepthEngine:
                 return filtered, proc_time, self.model_name, mean_conf
             except Exception as err:
                 print(f"[DepthEngine] Inference exception: {err}. Reverting to structural fallback.")
+                import gc
+                gc.collect()
                 
         # 2. Structural & Multi-scale Aerial Depth Estimator (CV Fallback)
         img_np = np.array(pil_image.convert("RGB"))
