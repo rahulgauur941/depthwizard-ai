@@ -1,0 +1,117 @@
+{
+  "id": "demo-harbor",
+  "title": "Maritime Terminal & Industrial Harbor",
+  "category": "Coastal Infrastructure",
+  "image_url": "/demo/harbor_aerial.jpg",
+  "depth_url": "/demo/harbor_depth.png",
+  "resolution": "512 x 512 px",
+  "file_size": "156 KB",
+  "format": "JPEG",
+  "processing_time": 0.44,
+  "model_name": "Depth Anything V2 (Metric / Relative)",
+  "confidence": 0.93,
+  "calibration_status": "Calibrated (GSD: 0.50m/px, Sea Level Datum: 0.0m)",
+  "min_height": 0.0,
+  "max_height": 65.0,
+  "average_height": 14.8,
+  "objects": [
+    {
+      "id": "MAR-01",
+      "name": "Container Ship 'Pacific Titan'",
+      "type": "Vessel",
+      "box": [
+        60,
+        100,
+        130,
+        260
+      ],
+      "height": 28.5,
+      "norm_depth": 0.35,
+      "confidence": 0.95
+    },
+    {
+      "id": "IND-01",
+      "name": "Cylindrical Fuel Silo Alpha",
+      "type": "Storage Tank",
+      "box": [
+        170,
+        50,
+        240,
+        120
+      ],
+      "height": 32.0,
+      "norm_depth": 0.45,
+      "confidence": 0.93
+    },
+    {
+      "id": "IND-02",
+      "name": "Cylindrical Fuel Silo Beta",
+      "type": "Storage Tank",
+      "box": [
+        260,
+        50,
+        330,
+        120
+      ],
+      "height": 32.0,
+      "norm_depth": 0.45,
+      "confidence": 0.94
+    },
+    {
+      "id": "IND-03",
+      "name": "Logistics Hangar 04",
+      "type": "Industrial Warehouse",
+      "box": [
+        360,
+        40,
+        490,
+        160
+      ],
+      "height": 21.0,
+      "norm_depth": 0.3,
+      "confidence": 0.91
+    },
+    {
+      "id": "IND-04",
+      "name": "Container Stacking Yard A",
+      "type": "Cargo Stack",
+      "box": [
+        170,
+        160,
+        320,
+        320
+      ],
+      "height": 18.2,
+      "norm_depth": 0.26,
+      "confidence": 0.88
+    },
+    {
+      "id": "IND-05",
+      "name": "Quay Gantry Crane North",
+      "type": "Port Crane",
+      "box": [
+        135,
+        140,
+        165,
+        230
+      ],
+      "height": 65.0,
+      "norm_depth": 0.82,
+      "confidence": 0.9
+    },
+    {
+      "id": "IND-06",
+      "name": "Deepwater Dock Basin",
+      "type": "Marine Slipway",
+      "box": [
+        0,
+        0,
+        140,
+        512
+      ],
+      "height": 0.0,
+      "norm_depth": 0.02,
+      "confidence": 0.99
+    }
+  ]
+}

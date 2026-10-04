@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: depthwizard-ai
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: standard
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: ENVIRONMENT
+        value: production
+      - key: CORS_ORIGINS
+        value: "*"

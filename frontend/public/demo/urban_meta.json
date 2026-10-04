@@ -1,0 +1,226 @@
+{
+  "id": "demo-urban",
+  "title": "Metropolitan Central District",
+  "category": "Urban Satellite / Aerial",
+  "image_url": "/demo/urban_aerial.jpg",
+  "depth_url": "/demo/urban_depth.png",
+  "resolution": "512 x 512 px",
+  "file_size": "142 KB",
+  "format": "JPEG",
+  "processing_time": 0.42,
+  "model_name": "Depth Anything V2 (Metric / Relative)",
+  "confidence": 0.94,
+  "calibration_status": "Calibrated (GSD: 0.35m/px, Alt: 450m)",
+  "min_height": 0.0,
+  "max_height": 112.0,
+  "average_height": 26.4,
+  "objects": [
+    {
+      "id": "BLD-01",
+      "name": "Apex Center Tower",
+      "type": "Commercial High-Rise",
+      "box": [
+        40,
+        40,
+        160,
+        160
+      ],
+      "height": 86.4,
+      "norm_depth": 0.88,
+      "color": [
+        160,
+        185,
+        205
+      ],
+      "roof_color": [
+        110,
+        140,
+        165
+      ]
+    },
+    {
+      "id": "BLD-02",
+      "name": "Meridian Financial",
+      "type": "Skyscraper",
+      "box": [
+        190,
+        35,
+        280,
+        170
+      ],
+      "height": 112.0,
+      "norm_depth": 0.96,
+      "color": [
+        140,
+        170,
+        195
+      ],
+      "roof_color": [
+        95,
+        125,
+        150
+      ]
+    },
+    {
+      "id": "BLD-03",
+      "name": "CyberTech Hub",
+      "type": "Office Complex",
+      "box": [
+        310,
+        45,
+        470,
+        150
+      ],
+      "height": 45.2,
+      "norm_depth": 0.52,
+      "color": [
+        180,
+        175,
+        165
+      ],
+      "roof_color": [
+        130,
+        125,
+        115
+      ]
+    },
+    {
+      "id": "BLD-04",
+      "name": "Horizon Plaza A",
+      "type": "Residential Tower",
+      "box": [
+        45,
+        190,
+        140,
+        320
+      ],
+      "height": 62.8,
+      "norm_depth": 0.68,
+      "color": [
+        175,
+        190,
+        195
+      ],
+      "roof_color": [
+        120,
+        140,
+        150
+      ]
+    },
+    {
+      "id": "BLD-05",
+      "name": "Horizon Plaza B",
+      "type": "Residential Tower",
+      "box": [
+        160,
+        195,
+        275,
+        305
+      ],
+      "height": 58.5,
+      "norm_depth": 0.64,
+      "color": [
+        170,
+        185,
+        190
+      ],
+      "roof_color": [
+        115,
+        135,
+        145
+      ]
+    },
+    {
+      "id": "BLD-06",
+      "name": "Civic Transit Pavilion",
+      "type": "Transit Terminal",
+      "box": [
+        305,
+        190,
+        480,
+        320
+      ],
+      "height": 22.0,
+      "norm_depth": 0.28,
+      "color": [
+        150,
+        160,
+        165
+      ],
+      "roof_color": [
+        100,
+        110,
+        115
+      ]
+    },
+    {
+      "id": "BLD-07",
+      "name": "Grand Metropolis Hotel",
+      "type": "Luxury Hotel",
+      "box": [
+        40,
+        350,
+        150,
+        480
+      ],
+      "height": 74.0,
+      "norm_depth": 0.78,
+      "color": [
+        195,
+        185,
+        175
+      ],
+      "roof_color": [
+        145,
+        135,
+        125
+      ]
+    },
+    {
+      "id": "BLD-08",
+      "name": "North Logistics Center",
+      "type": "Warehouse & Logistics",
+      "box": [
+        180,
+        345,
+        330,
+        475
+      ],
+      "height": 18.5,
+      "norm_depth": 0.22,
+      "color": [
+        130,
+        140,
+        145
+      ],
+      "roof_color": [
+        85,
+        95,
+        100
+      ]
+    },
+    {
+      "id": "BLD-09",
+      "name": "BioScience Research Lab",
+      "type": "Research Facility",
+      "box": [
+        355,
+        355,
+        475,
+        475
+      ],
+      "height": 38.6,
+      "norm_depth": 0.44,
+      "color": [
+        165,
+        180,
+        190
+      ],
+      "roof_color": [
+        115,
+        130,
+        140
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "demo-mountain",
+  "title": "Alpine Ridge & Basin Topography",
+  "category": "Rugged Terrain Elevation",
+  "image_url": "/demo/mountain_aerial.jpg",
+  "depth_url": "/demo/mountain_depth.png",
+  "resolution": "512 x 512 px",
+  "file_size": "168 KB",
+  "format": "JPEG",
+  "processing_time": 0.38,
+  "model_name": "Depth Anything V2 (Metric / Relative)",
+  "confidence": 0.96,
+  "calibration_status": "Calibrated (GSD: 1.2m/px, Alt: 1800m)",
+  "min_height": 12.0,
+  "max_height": 348.5,
+  "average_height": 164.2,
+  "objects": [
+    {
+      "id": "GEO-01",
+      "name": "Summit Peak Alpha",
+      "type": "Mountain Summit",
+      "box": [
+        220,
+        180,
+        290,
+        250
+      ],
+      "height": 348.5,
+      "norm_depth": 0.98,
+      "confidence": 0.96
+    },
+    {
+      "id": "GEO-02",
+      "name": "Eagle Ridge Spur",
+      "type": "Ridgeline",
+      "box": [
+        110,
+        240,
+        210,
+        340
+      ],
+      "height": 265.0,
+      "norm_depth": 0.79,
+      "confidence": 0.92
+    },
+    {
+      "id": "GEO-03",
+      "name": "Alpine Valley Basin",
+      "type": "Depression / Meadow",
+      "box": [
+        310,
+        320,
+        420,
+        440
+      ],
+      "height": 45.0,
+      "norm_depth": 0.18,
+      "confidence": 0.89
+    },
+    {
+      "id": "GEO-04",
+      "name": "Northern Escarpment",
+      "type": "Cliff Face",
+      "box": [
+        70,
+        70,
+        190,
+        170
+      ],
+      "height": 290.2,
+      "norm_depth": 0.84,
+      "confidence": 0.91
+    }
+  ]
+}
